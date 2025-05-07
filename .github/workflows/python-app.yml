@@ -1,9 +1,3 @@
-
----
-
-### ⚙ **.github/workflows/python-app.yml**
-
-```yaml
 name: Python application
 
 on:
