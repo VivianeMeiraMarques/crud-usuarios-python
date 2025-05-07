@@ -24,4 +24,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest .\test-users.py
+        python -m pytest .\tests\test-users.py
