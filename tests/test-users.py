@@ -1,5 +1,19 @@
 import app.users as u
 
+def test_add_user():
+    data = {'name': 'João', 'email': 'joao@example.com', 'password': '1234', 'cpf': '11122233344'}
+    result, status = u.add_user(data)
+    assert status == 201
+    assert result['cpf'] == '11122233344'
+    assert result['name'] == 'João'
+
+def test_list_users():
+    result, status = u.list_users()
+    assert status == 200
+    assert isinstance(result, list)
+    assert len(result) >= 1
+
+
 def setup_function():
     u.reset_users()
     u.add_user({'name': 'Maria', 'email': 'maria@example.com', 'password': 'abcd', 'cpf': '55566677788'})
